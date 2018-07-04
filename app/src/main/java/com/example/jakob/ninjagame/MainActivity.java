@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeToPlayScreen(View button) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, InGameActvity.class);
         Button b = (Button)button;
         String message = b.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);

@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="219dp"
-        android:onClick="buttonClick"
+        android:onClick="changeToPlayScreen"
         android:text="Duke sucks"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
