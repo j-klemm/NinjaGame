@@ -2,18 +2,24 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ingame_background"
-    tools:context=".InGameActvity">
+    tools:context=".InGameActvity"
+    tools:layout_editor_absoluteY="25dp">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="In-Game Activity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/background_one"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:src="@drawable/ingame_background"
+        tools:layout_editor_absoluteY="-73dp" />
+
+    <ImageView
+        android:id="@+id/background_two"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:src="@drawable/ingame_background"
+        tools:layout_editor_absoluteY="-73dp" />
+
 </android.support.constraint.ConstraintLayout>
