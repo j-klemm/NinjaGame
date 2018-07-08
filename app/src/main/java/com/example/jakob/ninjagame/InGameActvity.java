@@ -1,13 +1,17 @@
 package com.example.jakob.ninjagame;
 
 import android.animation.ValueAnimator;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
 public class InGameActvity extends AppCompatActivity {
+    AnimationDrawable skateboardAnimation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +36,22 @@ public class InGameActvity extends AppCompatActivity {
             }
         });
         animator.start();
+
+        ImageView skateboardImage = (ImageView) findViewById(R.id.skateboard);
+        skateboardImage.setBackgroundResource(R.drawable.skateboard_animation);
+        skateboardAnimation = (AnimationDrawable) skateboardImage.getBackground();
+
+        skateboardImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(skateboardAnimation.isRunning()){
+                    skateboardAnimation.stop();
+                }
+                    skateboardAnimation.start();
+
+            }
+        });
     }
-}
+
+    }
+
